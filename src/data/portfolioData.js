@@ -177,12 +177,4 @@ export const socials = [
   { label: "Email", href: "mailto:aryan@example.com", icon: Mail, color: "hover:text-emerald-300" },
 ];
 
-export const stackTagClass = {
-  React: "bg-blue-500/20 text-blue-200 border-blue-400/40",
-  "Node.js": "bg-green-500/20 text-green-200 border-green-400/40",
-  Express: "bg-yellow-500/20 text-yellow-200 border-yellow-400/40",
-  MongoDB: "bg-emerald-500/20 text-emerald-200 border-emerald-400/40",
-  Tailwind: "bg-cyan-500/20 text-cyan-200 border-cyan-400/40",
-  TailwindCSS: "bg-cyan-500/20 text-cyan-200 border-cyan-400/40",
-  "Socket.io": "bg-rose-500/20 text-rose-200 border-rose-400/40",
-};
+

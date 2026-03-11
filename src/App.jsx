@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Project";
+import Journey from "./components/Journey";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <Journey />
       <Footer />
     </>
   );
