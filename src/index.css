@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Raw design tokens */
+:root {
+  --background: 240 20% 4%;
+  --foreground: 210 40% 95%;
+
+  --card: 240 15% 8%;
+  --card-foreground: 210 40% 95%;
+
+  --popover: 240 15% 8%;
+  --popover-foreground: 210 40% 95%;
+
+  --primary: 270 80% 65%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 185 80% 50%;
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 240 10% 14%;
+  --muted-foreground: 215 20% 55%;
+
+  --accent: 270 60% 50%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 240 10% 18%;
+  --input: 240 10% 18%;
+  --ring: 270 80% 65%;
+
+  --radius: 0.75rem;
+
+  --gradient-violet: linear-gradient(135deg, hsl(270 80% 65%), hsl(290 80% 55%));
+  --gradient-cyan: linear-gradient(135deg, hsl(185 80% 50%), hsl(200 80% 55%));
+  --gradient-hero: linear-gradient(135deg, hsl(270 80% 65% / 0.3), hsl(185 80% 50% / 0.3), hsl(320 80% 55% / 0.2));
+  --glass-bg: hsl(240 15% 8% / 0.6);
+  --glass-border: hsl(0 0% 100% / 0.08);
+  --glow-violet: 0 0 30px hsl(270 80% 65% / 0.3);
+  --glow-cyan: 0 0 30px hsl(185 80% 50% / 0.3);
+
+  --sidebar-background: 240 15% 6%;
+  --sidebar-foreground: 210 40% 95%;
+  --sidebar-primary: 270 80% 65%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 10% 14%;
+  --sidebar-accent-foreground: 210 40% 95%;
+  --sidebar-border: 240 10% 18%;
+  --sidebar-ring: 270 80% 65%;
+}
+
+/* Tailwind v4 theme tokens */
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@utility glass {
+  @apply bg-card/60 backdrop-blur-xl border border-border/50;
+}
+
+@utility glass-strong {
+  @apply bg-card/80 backdrop-blur-2xl border border-border/60;
+}
+
+@utility gradient-text {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary;
+}
+
+@utility gradient-text-violet {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-violet-400 to-purple-500;
+}
+
+@utility gradient-text-cyan {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-cyan-400 to-teal-400;
+}
+
+@utility section-divider {
+  @apply h-px w-full bg-linear-to-r from-transparent via-primary/30 to-transparent;
+}
+
+@utility hover-glow-violet {
+  @apply transition-all duration-300 hover:shadow-[0_0_30px_hsl(270_80%_65%/0.25)];
+}
+
+@utility hover-glow-cyan {
+  @apply transition-all duration-300 hover:shadow-[0_0_30px_hsl(185_80%_50%/0.25)];
+}
+
+@utility hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-2;
+}
+
+@utility animate-in-view {
+  @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+}
+
+.animate-in-view.visible {
+  @apply opacity-100 translate-y-0;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
