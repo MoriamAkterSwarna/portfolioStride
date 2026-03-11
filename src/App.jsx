@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { navLinks } from "./data/portfolioData";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
   return (
     <>
       <Navbar activeSection={activeSection} />
-      
+      <Hero />
       <Footer />
     </>
   );
