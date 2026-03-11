@@ -4,6 +4,7 @@ import { navLinks } from "./data/portfolioData";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <>
       <Navbar activeSection={activeSection} />
       <Hero />
+      <About />
       <Footer />
     </>
   );
