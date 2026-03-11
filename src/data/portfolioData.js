@@ -1,5 +1,8 @@
 import { Code2, Database, Github, Linkedin, Mail, Server, Twitter, Wrench } from "lucide-react";
-
+import taskflowImg from "../assets/project-taskflow.jpg";
+import shopnestImg from "../assets/project-shopnest.jpg";
+import chatsphereImg from "../assets/project-chatsphere.jpg";
+import blogverseImg from "../assets/project-blogverse.jpg";
 export const navLinks = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
@@ -51,54 +54,54 @@ export const skillGroups = [
 ];
 
 export const projects = [
-  {
-    id: 1,
-    number: "01",
-    title: "TaskFlow",
-    category: "Full Stack",
-    description: "Full-stack task management app",
-    problem: "Helps teams organize daily tasks with clarity and accountability.",
-    stack: ["React", "Node.js", "Express", "MongoDB"],
-    learned: "Learned REST APIs, JWT auth, and production-style CRUD workflows.",
-    gradient: "from-violet-500 to-purple-500",
-    glow: "hover:shadow-[0_20px_60px_rgba(139,92,246,0.35)]",
-  },
-  {
-    id: 2,
-    number: "02",
-    title: "ShopNest",
-    category: "Frontend",
-    description: "E-commerce platform with cart and auth",
-    problem: "Makes online shopping smoother with user-friendly account flows.",
-    stack: ["React", "Express", "MongoDB", "Tailwind"],
-    learned: "Improved state management skills and understood checkout/payment flow basics.",
-    gradient: "from-cyan-500 to-blue-500",
-    glow: "hover:shadow-[0_20px_60px_rgba(14,165,233,0.35)]",
-  },
-  {
-    id: 3,
-    number: "03",
-    title: "ChatSphere",
-    category: "Full Stack",
-    description: "Real-time chat app with rooms and emoji",
-    problem: "Enables instant messaging between users in shared spaces.",
-    stack: ["React", "Node.js", "Socket.io", "MongoDB"],
-    learned: "Understood WebSockets, event-driven architecture, and real-time UX polish.",
-    gradient: "from-pink-500 to-rose-500",
-    glow: "hover:shadow-[0_20px_60px_rgba(244,63,94,0.35)]",
-  },
-  {
-    id: 4,
-    number: "04",
-    title: "BlogVerse",
-    category: "UI/UX",
-    description: "Full-stack blogging platform with editor",
-    problem: "Helps writers publish, format, and share ideas online.",
-    stack: ["React", "Node.js", "MongoDB", "TailwindCSS"],
-    learned: "Built confidence with rich text editing, auth logic, and image upload handling.",
-    gradient: "from-orange-500 to-amber-500",
-    glow: "hover:shadow-[0_20px_60px_rgba(245,158,11,0.35)]",
-  },
+ {
+     num: "01",
+     title: "TaskFlow",
+     desc: "Full-stack task management app",
+     solves: "Helps teams organize daily tasks efficiently.",
+     stack: ["React", "Node.js", "Express", "MongoDB"],
+     gradient: "from-violet-500 to-purple-600",
+     glowColor: "hover:shadow-[0_0_40px_hsl(270_80%_65%_/_0.3)]",
+     learned: "REST APIs, JWT authentication, CRUD operations, and responsive design patterns.",
+     category: "fullstack",
+     image: taskflowImg,
+   },
+   {
+     num: "02",
+     title: "ShopNest",
+     desc: "E-commerce platform with cart & auth",
+     solves: "Online shopping experience with user accounts.",
+     stack: ["React", "Express", "MongoDB", "Tailwind"],
+     gradient: "from-cyan-500 to-blue-600",
+     glowColor: "hover:shadow-[0_0_40px_hsl(200_80%_55%_/_0.3)]",
+     learned: "State management, payment flow logic, and user authentication patterns.",
+     category: "fullstack",
+     image: shopnestImg,
+   },
+   {
+     num: "03",
+     title: "ChatSphere",
+     desc: "Real-time chat app with rooms & emoji",
+     solves: "Instant messaging between users in real-time.",
+     stack: ["React", "Node.js", "Socket.io", "MongoDB"],
+     gradient: "from-pink-500 to-rose-600",
+     glowColor: "hover:shadow-[0_0_40px_hsl(340_80%_55%_/_0.3)]",
+     learned: "WebSockets, real-time event handling, and room-based architecture.",
+     category: "fullstack",
+     image: chatsphereImg,
+   },
+   {
+     num: "04",
+     title: "BlogVerse",
+     desc: "Full-stack blogging platform with editor",
+     solves: "Writers publishing and managing content online.",
+     stack: ["React", "Node.js", "MongoDB", "TailwindCSS"],
+     gradient: "from-orange-500 to-amber-500",
+     glowColor: "hover:shadow-[0_0_40px_hsl(30_80%_55%_/_0.3)]",
+     learned: "Rich text editor integration, auth flows, and image upload handling.",
+     category: "fullstack",
+     image: blogverseImg,
+   },
 ];
 
 export const timelineItems = [
